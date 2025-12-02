@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-12-01T13:11:08 IST" name="Suite" finished-at="2025-12-01T13:11:17 IST" duration-ms="8676">
+    <groups>
+    </groups>
+    <test started-at="2025-12-01T13:11:08 IST" name="Test" finished-at="2025-12-01T13:11:17 IST" duration-ms="8676">
+      <class name="testscript.AdminUsersTest">
+        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testscript.AdminUsersTest@7dfd3c81]" started-at="2025-12-01T13:11:08 IST" name="browserInitialization" finished-at="2025-12-01T13:11:13 IST" duration-ms="4327" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserInitialization -->
+        <test-method signature="verifyUserCanAddNewUsers()[pri:0, instance:testscript.AdminUsersTest@7dfd3c81]" started-at="2025-12-01T13:11:13 IST" name="verifyUserCanAddNewUsers" finished-at="2025-12-01T13:11:17 IST" duration-ms="4257" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserCanAddNewUsers -->
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.AdminUsersTest@7dfd3c81]" started-at="2025-12-01T13:11:17 IST" name="browserQuitAndClose" finished-at="2025-12-01T13:11:17 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserCanAddNewUsers status=SUCCESS method=AdminUsersTest.verifyUserCanAddNewUsers()[pri:0, instance:testscript.AdminUsersTest@7dfd3c81] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuitAndClose -->
+      </class> <!-- testscript.AdminUsersTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
