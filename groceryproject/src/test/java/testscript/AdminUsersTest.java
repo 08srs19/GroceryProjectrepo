@@ -5,12 +5,13 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constant.Constant;
 import pages.AdminUsersPage;
 import pages.LoginPage;
 import utilities.ExcelUtilities;
 
 public class AdminUsersTest extends Base {
-	@Test
+	@Test(description = "Used to verify whether the user is able to enter admin user informations")
 	public void verifyUserCanAddNewUsers() throws IOException {
 
         //LOGIN
@@ -37,7 +38,7 @@ public class AdminUsersTest extends Base {
         users.selectUserType(userType);
         users.clickTheSave();
         boolean alert=users.isSuccessAlertDisplayed();
-		Assert.assertTrue(alert);
+		Assert.assertTrue(alert,Constant.ALERTDISPLAYFORADMINUSER);
 	}
 
 }

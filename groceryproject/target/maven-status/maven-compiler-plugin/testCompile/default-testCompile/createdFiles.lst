@@ -1,6 +1,11 @@
-testscript\LoginTest.class
 generateReport\Listeners.class
 testscript\Base.class
+testscript\HomeTest.class
+testscript\LoginTest.class
+testscript\LogoutTest.class
+testscript\ManageCategoryTest.class
 testscript\ManageNewsTest.class
 testscript\AdminUsersTest.class
+testscript\ManageContactTest.class
+testscript\ManageFooterTextTest.class
 retry\Retry.class

@@ -5,12 +5,13 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constant.Constant;
 import pages.LoginPage;
 import pages.ManageNewsPage;
 import utilities.ExcelUtilities;
 
 public class ManageNewsTest extends Base{
-	@Test
+	@Test(groups = {"Regression"},description = "To Verify User is able to enter the ManageNews")
 	public void verifyUserCanAddNews() throws IOException {
 
         //LOGIN
@@ -33,6 +34,6 @@ public class ManageNewsTest extends Base{
         news.enterTheNews(newsmatter);
         news.clickTheSave();
         boolean alert=news.isSuccessAlertDisplayed();
-		Assert.assertTrue(alert);
+		Assert.assertTrue(alert,Constant.ALERTDISPLAYEDFORMANAGENEWS);
 	}
 }

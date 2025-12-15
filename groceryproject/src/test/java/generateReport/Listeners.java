@@ -27,17 +27,24 @@ public class Listeners implements ITestListener {
 
 	public void onTestSuccess(ITestResult result) {
 
-		ITestListener.super.onTestSuccess(result);
-		extentTest.get().log(Status.PASS, "Test Passed");
+		//ITestListener.super.onTestSuccess(result);
+		//extentTest.get().log(Status.PASS, "Test Passed");
+		 if (extentTest.get() != null) {
+	            extentTest.get().log(Status.PASS, "Test Passed");
+	        }
 
 	}
 	public void onTestFailure(ITestResult result) {
 
-		ITestListener.super.onTestFailure(result);
+		//ITestListener.super.onTestFailure(result);
+		if (extentTest.get() == null) {
+            ExtentTest test = extent.createTest(result.getMethod().getMethodName());
+            extentTest.set(test);
+        }
 		extentTest.get().log(Status.FAIL, "Test Failed");
 		extentTest.get().fail(result.getThrowable());
 		WebDriver driver = null;
-		String testMethodName = result.getMethod().getMethodName();
+		//String testMethodName = result.getMethod().getMethodName();
 		try {
 			driver = (WebDriver) result.getTestClass().getRealClass().getDeclaredField("driver")
 					.get(result.getInstance());
@@ -62,9 +69,13 @@ public class Listeners implements ITestListener {
 		}
 	}
 public void onTestSkipped(ITestResult result) {
-		ITestListener.super.onTestSkipped(result);
+		//ITestListener.super.onTestSkipped(result);
+		if (extentTest.get() == null) {
+            ExtentTest test = extent.createTest(result.getMethod().getMethodName());
+            extentTest.set(test);
+        }
 		extentTest.get().log(Status.SKIP, "Test Skipped");
-		String testMethodName = result.getMethod().getMethodName();
+		//String testMethodName = result.getMethod().getMethodName();
 
 	}
 

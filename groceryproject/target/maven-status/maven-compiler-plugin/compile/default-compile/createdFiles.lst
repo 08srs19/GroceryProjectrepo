@@ -1,9 +1,16 @@
 pages\LoginPage.class
+utilities\FakerUtilities.class
+pages\HomePage.class
 utilities\ExtentReportUtility.class
+pages\ManageContactPage.class
+pages\ManageFooterTextPage.class
 utilities\ExcelUtilities.class
 utilities\FileUploadUtilities.class
 utilities\ScreenshotUtilities.class
+pages\LogoutPage.class
 utilities\PageUtilities.class
 constant\Constant.class
+pages\ManageCategoryPage.class
 pages\ManageNewsPage.class
+utilities\WaitUtilities.class
 pages\AdminUsersPage.class
