@@ -2,11 +2,13 @@ package testscript;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtilities;
+
 
 public class HomeTest extends Base{
 	LoginPage loginpage;
@@ -18,9 +20,9 @@ public class HomeTest extends Base{
 		String username = ExcelUtilities.getStringData(1, 0, "loginpage");
 		String password = ExcelUtilities.getStringData(1, 1, "loginpage");
 		
-		loginpage.enterTheUserName(username).enterThePassword(password);
-		loginpage.clickTheSignIn();
-		
+		 homepage = loginpage.enterTheUserName(username).enterThePassword(password).clickTheSignIn();
+                 
+		 Assert.assertTrue(homepage.isHomePageDisplayed());
 	}
 
 }

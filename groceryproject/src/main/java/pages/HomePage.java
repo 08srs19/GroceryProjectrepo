@@ -11,7 +11,7 @@ public class HomePage {
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-category' and @class='small-box-footer']") WebElement ManageCategoryMoreInfo;
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-contact' and @class=' nav-link']") WebElement ManageContactMoreIsnfo;
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-footertext' and @class='small-box-footer']") WebElement ManageFooterTextMoreInfo;
-	
+	@FindBy(xpath="//li[text()='Dashboard']")WebElement home;
 	public WebDriver driver;
 	
 	public HomePage(WebDriver driver) {
@@ -43,6 +43,9 @@ public class HomePage {
 	{
 		ManageFooterTextMoreInfo.click();
 		return new ManageFooterTextPage(driver);
+	}
+	public boolean isHomePageDisplayed() {
+	    return home.isDisplayed();
 	}
 
 }
