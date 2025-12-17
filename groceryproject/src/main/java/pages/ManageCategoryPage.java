@@ -12,7 +12,7 @@ import utilities.PageUtilities;
 
 public class ManageCategoryPage {
 	//@FindBy (xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-category']")WebElement moreinfo;
-	@FindBy (xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/Category/add']")WebElement newadd;
+	@FindBy (xpath="//a[contains(text(),'New')]")WebElement newadd;
 	@FindBy (xpath="//input[@placeholder='Enter the Category']")WebElement entercategory;
 	@FindBy (xpath="//div[@id='ms-grp_id']")WebElement selectgroups;
 	@FindBy (xpath="//li[@id='134-selectable']")WebElement discount;
