@@ -6,11 +6,14 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import constant.Constant;
+import pages.HomePage;
 import pages.LoginPage;
 import pages.LogoutPage;
 import utilities.ExcelUtilities;
 
 public class LogoutTest extends Base{
+	LogoutPage logout;
+	HomePage homepage;
 	@Test(description = "Used to verify user is able to logout")
 	 public void verifyLogout() throws IOException {
 		//LOGIN
@@ -19,9 +22,8 @@ public class LogoutTest extends Base{
 	        //login.enterThePassword("admin");
 	        String username=ExcelUtilities.getStringData(1, 0, "loginpage");
 			String password=ExcelUtilities.getStringData(1, 1, "loginpage");
-			login.enterTheUserName(username);
-			login.enterThePassword(password);
-	        login.clickTheSignIn();
+			login.enterTheUserName(username).enterThePassword(password);
+	        homepage=login.clickTheSignIn();
 	        
 	    //LOGOUT
 	        LogoutPage logout = new LogoutPage(driver);

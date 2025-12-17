@@ -14,4 +14,5 @@ public class Constant {
 	public static final String ALERTDISPLAYEDFORMANAGECONTACT = "Alert message displayed for Manage contact page";
 	public static final String ALERTDISPLAYEDFORMANAGEFOOTERTEXT = "Alert message displayed for manage footer text";
 	public static final String ALERTDISPLAYEDFORMANAGENEWS = "Alert message displayed for manage news page";
+	public static final String ALERTDISPLAYEDFORHOMEPAGE ="Home page is NOT displayed after login";
 }

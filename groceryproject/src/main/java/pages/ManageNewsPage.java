@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ManageNewsPage {
 	//@FindBy (xpath="//p[text()='Manage News']")WebElement managenews;
-		@FindBy (xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news']")WebElement moreinfo;
+		//@FindBy (xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news']")WebElement moreinfo;
 		@FindBy (xpath="//a[@class='btn btn-rounded btn-danger']")WebElement newbutton;
 		@FindBy (xpath="//textarea[@id='news']")WebElement enternews;
 		@FindBy (xpath="//button[text()='Save']")WebElement savebutton;
@@ -19,17 +19,20 @@ public class ManageNewsPage {
 			//to initialize web elements
 			PageFactory.initElements(driver, this);
 		}
-		public void clickTheMoreInfo() {
+		/*public void clickTheMoreInfo() {
 			moreinfo.click();
-		}
-		public void clickTheNew() {
+		}*/
+		public ManageNewsPage clickTheNew() {
 			newbutton.click();
+			return this;
 		}
-		public void enterTheNews(String newsmatter) {
+		public ManageNewsPage enterTheNews(String newsmatter) {
 			enternews.sendKeys(newsmatter);
+			return this;
 		}
-		public void clickTheSave() {
+		public ManageNewsPage clickTheSave() {
 			savebutton.click();
+			return this;
 		}
 		public boolean isSuccessAlertDisplayed() {
 			return successalert.isDisplayed();

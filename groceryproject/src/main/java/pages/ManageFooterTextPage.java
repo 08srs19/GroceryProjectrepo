@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.PageUtilities;
 
 public class ManageFooterTextPage {
-	@FindBy (xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-footertext' and @class='small-box-footer']")WebElement moreinfo;
+	//@FindBy (xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-footertext' and @class='small-box-footer']")WebElement moreinfo;
 	@FindBy (xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/Footertext/edit?edit=1']")WebElement action;
 	@FindBy (xpath="//textarea[@placeholder='Enter the Address']")WebElement address;
 	@FindBy (xpath="//input[@id='email']")WebElement email;
@@ -22,13 +22,14 @@ public class ManageFooterTextPage {
 		//to initialize web elements
 		PageFactory.initElements(driver, this);
 	}
-	 public void clickMoreInfo() {
+	 /*public void clickMoreInfo() {
 		 moreinfo.click();
-	}
-	 public void clickAction() {
+	}*/
+	 public ManageFooterTextPage clickAction() {
 		 action.click();
+		 return this;
 	 }
-	 public void updateContact(String phonenum, String emailid, String addressdetails) {
+	 public ManageFooterTextPage updateContact(String phonenum, String emailid, String addressdetails) {
 	        phone.clear();
 	        phone.sendKeys(phonenum);
 	        
@@ -37,12 +38,14 @@ public class ManageFooterTextPage {
 	        
 	        address.clear();
 	        address.sendKeys(addressdetails);
+	        return this;
 	 }
-	 public void clickUpdate() {
+	 public ManageFooterTextPage clickUpdate() {
 		 PageUtilities change= new PageUtilities();
 		 //click update
 		 change.click(driver, update);
 		 //update.click();
+		 return this;
 	}
 	 public boolean isSuccessAlertDisplayed() {
 			return successalert.isDisplayed();

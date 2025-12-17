@@ -16,11 +16,13 @@ public class LogoutPage {
 		//to initialize web elements
 		PageFactory.initElements(driver, this);
 	}
-	public void clickTheProfile() {
+	public LogoutPage clickTheProfile() {
 		profile.click();
+		return this;
 	}
-	public void clickTheLogout() {
+	public LogoutPage clickTheLogout() {
 		logout.click();
+		return this;
 	}
 	public boolean isLoginPageDisplayed() {
 	    return login.isDisplayed();

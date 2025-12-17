@@ -245,16 +245,16 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testscript.ManageCategoryTest</span>
+              <span class="class-name">testscript.AdminUsersTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyUserCanAddNewCategory">
-                  </a> <!-- verifyUserCanAddNewCategory -->
-                  <span class="method-name">verifyUserCanAddNewCategory</span>
+                  <a name="verifyUserCanAddNewUsers">
+                  </a> <!-- verifyUserCanAddNewUsers -->
+                  <span class="method-name">verifyUserCanAddNewUsers</span>
                   <em>
-(To verify user is able to enter category informations)                  </em>
+(Used to verify whether the user is able to enter admin user informations)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -279,16 +279,16 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testscript.AdminUsersTest</span>
+              <span class="class-name">testscript.ManageCategoryTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyUserCanAddNewUsers">
-                  </a> <!-- verifyUserCanAddNewUsers -->
-                  <span class="method-name">verifyUserCanAddNewUsers</span>
+                  <a name="verifyUserCanAddNewCategory">
+                  </a> <!-- verifyUserCanAddNewCategory -->
+                  <span class="method-name">verifyUserCanAddNewCategory</span>
                   <em>
-(Used to verify whether the user is able to enter admin user informations)                  </em>
+(To verify user is able to enter category informations)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -392,48 +392,48 @@ data.addRows(10);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyUserCanUpdate')
 data.setCell(0, 2, 'testscript.ManageContactTest')
-data.setCell(0, 3, 5652);
+data.setCell(0, 3, 6541);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyUserCanAddNews')
-data.setCell(1, 2, 'testscript.ManageNewsTest')
-data.setCell(1, 3, 4330);
+data.setCell(1, 1, 'verifyUserCanAddNewCategory')
+data.setCell(1, 2, 'testscript.ManageCategoryTest')
+data.setCell(1, 3, 4534);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyUserCanAddNewCategory')
-data.setCell(2, 2, 'testscript.ManageCategoryTest')
-data.setCell(2, 3, 3874);
+data.setCell(2, 1, 'verifyUserCanAddNews')
+data.setCell(2, 2, 'testscript.ManageNewsTest')
+data.setCell(2, 3, 4231);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'verifyUserCanUpdate')
 data.setCell(3, 2, 'testscript.ManageFooterTextTest')
-data.setCell(3, 3, 3693);
+data.setCell(3, 3, 3903);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'verifyUserCanAddNewUsers')
 data.setCell(4, 2, 'testscript.AdminUsersTest')
-data.setCell(4, 3, 3336);
+data.setCell(4, 3, 3875);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'verifyBothWrongCredentials')
 data.setCell(5, 2, 'testscript.LoginTest')
-data.setCell(5, 3, 2905);
+data.setCell(5, 3, 2775);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'verifyLogout')
 data.setCell(6, 2, 'testscript.LogoutTest')
-data.setCell(6, 3, 2489);
+data.setCell(6, 3, 2706);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'verifyTheUserIsAbleToLoginUsingValidCredentials')
+data.setCell(7, 1, 'verifyUsernameWrong')
 data.setCell(7, 2, 'testscript.LoginTest')
-data.setCell(7, 3, 1298);
+data.setCell(7, 3, 1284);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'verifyUsernameWrong')
+data.setCell(8, 1, 'verifyTheUserIsAbleToLoginUsingValidCredentials')
 data.setCell(8, 2, 'testscript.LoginTest')
-data.setCell(8, 3, 961);
+data.setCell(8, 3, 1153);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'verifyPasswordWrong')
 data.setCell(9, 2, 'testscript.LoginTest')
-data.setCell(9, 3, 781);
+data.setCell(9, 3, 751);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 29 seconds</span>
+              <span class="suite-total-time">Total running time: 31 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -466,137 +466,137 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyBothWrongCredentials</span>
-                <span class="method-start">10401 ms</span>
+                <span class="method-start">4186 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">browserQuitAndClose([TestResult name=verifyBothWrongCredentials status=SUCCESS method=LoginTest.verifyBothWrongCredentia...)</span>
-                <span class="method-start">13316 ms</span>
+                <span class="method-start">6971 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">browserInitialization(chrome)</span>
-                <span class="method-start">13462 ms</span>
+                <span class="method-start">7136 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyPasswordWrong(admin, hello)</span>
-                <span class="method-start">15652 ms</span>
+                <span class="method-start">9438 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">browserQuitAndClose([TestResult name=verifyPasswordWrong status=SUCCESS method=LoginTest.verifyPasswordWrong(java.lang.S...)</span>
-                <span class="method-start">16437 ms</span>
+                <span class="method-start">10194 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">browserInitialization(chrome)</span>
-                <span class="method-start">16439 ms</span>
+                <span class="method-start">10196 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyTheUserIsAbleToLoginUsingValidCredentials</span>
-                <span class="method-start">18945 ms</span>
+                <span class="method-start">12794 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">browserQuitAndClose([TestResult name=verifyTheUserIsAbleToLoginUsingValidCredentials status=SUCCESS method=LoginTest.ver...)</span>
-                <span class="method-start">20249 ms</span>
+                <span class="method-start">13951 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">browserInitialization(chrome)</span>
-                <span class="method-start">20253 ms</span>
+                <span class="method-start">13955 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUsernameWrong</span>
-                <span class="method-start">24016 ms</span>
+                <span class="method-start">16499 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">browserQuitAndClose([TestResult name=verifyUsernameWrong status=SUCCESS method=LoginTest.verifyUsernameWrong()[pri:0, in...)</span>
-                <span class="method-start">24985 ms</span>
+                <span class="method-start">17785 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testscript.ManageNewsTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">browserInitialization(chrome)</span>
-                <span class="method-start">24993 ms</span>
+                <span class="method-start">17794 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserCanAddNews</span>
-                <span class="method-start">28572 ms</span>
+                <span class="method-start">21887 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">browserQuitAndClose([TestResult name=verifyUserCanAddNews status=SUCCESS method=ManageNewsTest.verifyUserCanAddNews()[pr...)</span>
-                <span class="method-start">32906 ms</span>
+                <span class="method-start">26120 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testscript.AdminUsersTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">browserInitialization(chrome)</span>
-                <span class="method-start">32908 ms</span>
+                <span class="method-start">26123 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserCanAddNewUsers</span>
-                <span class="method-start">37614 ms</span>
+                <span class="method-start">29321 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">browserQuitAndClose([TestResult name=verifyUserCanAddNewUsers status=SUCCESS method=AdminUsersTest.verifyUserCanAddNewUs...)</span>
-                <span class="method-start">40952 ms</span>
+                <span class="method-start">33198 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testscript.LogoutTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">browserInitialization(chrome)</span>
-                <span class="method-start">40955 ms</span>
+                <span class="method-start">33205 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyLogout</span>
-                <span class="method-start">44287 ms</span>
+                <span class="method-start">38034 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">browserQuitAndClose([TestResult name=verifyLogout status=SUCCESS method=LogoutTest.verifyLogout()[pri:0, instance:testsc...)</span>
-                <span class="method-start">46778 ms</span>
+                <span class="method-start">40744 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testscript.ManageFooterTextTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">browserInitialization(chrome)</span>
-                <span class="method-start">46780 ms</span>
+                <span class="method-start">40751 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserCanUpdate</span>
-                <span class="method-start">51560 ms</span>
+                <span class="method-start">44036 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">browserQuitAndClose([TestResult name=verifyUserCanUpdate status=SUCCESS method=ManageFooterTextTest.verifyUserCanUpdate(...)</span>
-                <span class="method-start">55256 ms</span>
+                <span class="method-start">47941 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testscript.ManageContactTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">browserInitialization(chrome)</span>
-                <span class="method-start">55259 ms</span>
+                <span class="method-start">47944 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserCanUpdate</span>
-                <span class="method-start">59354 ms</span>
+                <span class="method-start">53287 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">browserQuitAndClose([TestResult name=verifyUserCanUpdate status=SUCCESS method=ManageContactTest.verifyUserCanUpdate()[p...)</span>
-                <span class="method-start">65007 ms</span>
+                <span class="method-start">59831 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testscript.ManageCategoryTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">browserInitialization(chrome)</span>
-                <span class="method-start">65010 ms</span>
+                <span class="method-start">59837 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserCanAddNewCategory</span>
-                <span class="method-start">68042 ms</span>
+                <span class="method-start">64177 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">browserQuitAndClose([TestResult name=verifyUserCanAddNewCategory status=SUCCESS method=ManageCategoryTest.verifyUserCanA...)</span>
-                <span class="method-start">71916 ms</span>
+                <span class="method-start">68714 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

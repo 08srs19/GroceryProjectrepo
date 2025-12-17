@@ -7,10 +7,13 @@ import org.testng.annotations.Test;
 
 import constant.Constant;
 import pages.AdminUsersPage;
+import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtilities;
 
 public class AdminUsersTest extends Base {
+	AdminUsersPage adminuserstest;
+	HomePage homepage;
 	@Test(description = "Used to verify whether the user is able to enter admin user informations")
 	public void verifyUserCanAddNewUsers() throws IOException {
 
@@ -20,24 +23,23 @@ public class AdminUsersTest extends Base {
         //login.enterThePassword("admin");
         String username=ExcelUtilities.getStringData(1, 0, "loginpage");
 		String password=ExcelUtilities.getStringData(1, 1, "loginpage");
-		login.enterTheUserName(username);
-		login.enterThePassword(password);
-        login.clickTheSignIn();
+		login.enterTheUserName(username).enterThePassword(password);
+        homepage=login.clickTheSignIn();
 
 		//ADMIN USERS
-		AdminUsersPage users = new AdminUsersPage(driver);
-        users.clickTheMoreInfo();
-        users.clickTheNew();
-        //String newsmatter=ExcelUtilities.getStringData(0, 0, "addnews");
-        //String newsmatter=ExcelUtilities.getStringData(1, 0, "addnews");
+		//AdminUsersPage users = new AdminUsersPage(driver);
+        //users.clickTheMoreInfo();
+        //users.clickTheNew();
+        adminuserstest=homepage.clickOnAdminUserMoreinfo();
         String newusername=ExcelUtilities.getStringData(3, 0, "adminusers");
-        users.enterUsername(newusername);
+        //users.enterUsername(newusername);
         String newpassword=ExcelUtilities.getStringData(3, 1, "adminusers");
-        users.enterPassword(newpassword);
+        //users.enterPassword(newpassword);
         String userType=ExcelUtilities.getStringData(3, 2, "adminusers");
-        users.selectUserType(userType);
-        users.clickTheSave();
-        boolean alert=users.isSuccessAlertDisplayed();
+        //users.selectUserType(userType);
+        //users.clickTheSave();
+        adminuserstest.clickTheNew().enterUsername(newusername).enterPassword(newpassword).selectUserType(userType).clickTheSave();
+        boolean alert=adminuserstest.isSuccessAlertDisplayed();
 		Assert.assertTrue(alert,Constant.ALERTDISPLAYFORADMINUSER);
 	}
 

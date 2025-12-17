@@ -7,10 +7,13 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import constant.Constant;
+import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtilities;
 
 public class LoginTest extends Base {
+	LoginPage loginpage;
+	HomePage homepage;
 	@Test(description="To verify whether user is able to login using valid credentials")
 	public void verifyTheUserIsAbleToLoginUsingValidCredentials() throws IOException {
 		//String username="admin";
@@ -18,9 +21,8 @@ public class LoginTest extends Base {
 		String username=ExcelUtilities.getStringData(1, 0, "loginpage");
 		String password=ExcelUtilities.getStringData(1, 1, "loginpage");		
 		LoginPage loginpage=new LoginPage(driver);
-		loginpage.enterTheUserName(username);
-		loginpage.enterThePassword(password);
-		loginpage.clickTheSignIn();
+		loginpage.enterTheUserName(username).enterThePassword(password);
+		homepage=loginpage.clickTheSignIn();
 		boolean homepage=loginpage.isHomePageDisplayed();
 		Assert.assertTrue(homepage,Constant.LOGINUSINGCORRECTUSERNAMEANDCORRECTPASSWORD);
 	}
@@ -29,9 +31,11 @@ public class LoginTest extends Base {
 		String username=ExcelUtilities.getStringData(2, 0, "loginpage");
 		String password=ExcelUtilities.getStringData(2, 1, "loginpage");		
 		LoginPage loginpage=new LoginPage(driver);
-		loginpage.enterTheUserName(username);
-		loginpage.enterThePassword(password);
-		loginpage.clickTheSignIn();
+		//loginpage.enterTheUserName(username);
+		//loginpage.enterThePassword(password);
+		//loginpage.clickTheSignIn();
+		loginpage.enterTheUserName(username).enterThePassword(password);
+		homepage=loginpage.clickTheSignIn();
 		boolean loginwrong=loginpage.isBothWrongAlertDisplayed();
 		Assert.assertTrue(loginwrong,Constant.LOGINUSINGINCORRECTUSERNAMEANDPASSWORD);
 	}
@@ -40,9 +44,8 @@ public class LoginTest extends Base {
 		String username=ExcelUtilities.getStringData(3, 0, "loginpage");
 		String password=ExcelUtilities.getStringData(3, 1, "loginpage");		
 		LoginPage loginpage=new LoginPage(driver);
-		loginpage.enterTheUserName(username);
-		loginpage.enterThePassword(password);
-		loginpage.clickTheSignIn();
+		loginpage.enterTheUserName(username).enterThePassword(password);
+		homepage=loginpage.clickTheSignIn();
 		boolean usernamewrong=loginpage.isUsernameWrongAlertDisplayed();
 		Assert.assertTrue(usernamewrong,Constant.LOGINUSINGCORRECTUSERNAMEANDCORRECTPASSWORD);
 	}
@@ -52,7 +55,7 @@ public class LoginTest extends Base {
 		//String password=ExcelUtilities.getStringData(4, 1, "loginpage");		
 		LoginPage loginpage=new LoginPage(driver);
 		loginpage.enterTheUserName(username).enterThePassword(password);
-		loginpage.clickTheSignIn();
+		homepage=loginpage.clickTheSignIn();
 		boolean passwordwrong=loginpage.isPasswordWrongAlertDisplayed();
 		Assert.assertTrue(passwordwrong,Constant.LOGINUSINGCORRECTUSERNAMEANDINCORRECTPASSWORD);
 	}

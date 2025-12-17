@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.PageUtilities;
 
 public class AdminUsersPage {
-	@FindBy (xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin' and @class='small-box-footer']")WebElement moreinfo;
+	//@FindBy (xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin' and @class='small-box-footer']")WebElement moreinfo;
 	@FindBy (xpath="//a[@class='btn btn-rounded btn-danger']")WebElement newbutton;
 	@FindBy (xpath="//input[@id='username']")WebElement enterusername;
 	@FindBy (xpath="//input[@id='password']")WebElement enterpassword;
@@ -23,26 +23,31 @@ public class AdminUsersPage {
 		//to initialize web elements
 		PageFactory.initElements(driver, this);
 	}
-	public void clickTheMoreInfo() {
+	/*public void clickTheMoreInfo() {
 		moreinfo.click();
-	}
-	public void clickTheNew() {
+	}*/
+	public AdminUsersPage clickTheNew() {
 		newbutton.click();
+		return this;
 	}
-	public void enterUsername(String newusername) {
+	public AdminUsersPage enterUsername(String newusername) {
 		enterusername.sendKeys(newusername);
+		return this;
 	}
-	public void enterPassword(String newpassword) {
+	public AdminUsersPage enterPassword(String newpassword) {
 		enterpassword.sendKeys(newpassword);
+		return this;
 	}
-	public void selectUserType(String userType) {
+	public AdminUsersPage selectUserType(String userType) {
         //Select select = new Select(selectusertype);
         //select.selectByVisibleText(userType);
 		PageUtilities pageUtils = new PageUtilities();
 		pageUtils.selectByVisibleText(selectusertype, userType);
+		return this;
     }
-	public void clickTheSave() {
+	public AdminUsersPage clickTheSave() {
 		savebutton.click();
+		return this;
 	}
 	public boolean isSuccessAlertDisplayed() {
 		return successalert.isDisplayed();

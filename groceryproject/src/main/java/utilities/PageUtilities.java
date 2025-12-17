@@ -42,6 +42,10 @@ public class PageUtilities {
 			}
 			
 			//java script executor
+			public void scrollToElement(WebDriver driver, WebElement element) {
+			    JavascriptExecutor js = (JavascriptExecutor) driver;
+			    js.executeScript("arguments[0].scrollIntoView(true);", element);
+			}
 			public void scrollByPixel(WebDriver driver, int x, int y) {
 				JavascriptExecutor js = (JavascriptExecutor)driver;
 				js.executeScript("window.scrollBy(arguments[0],arguments[1]);", x, y);

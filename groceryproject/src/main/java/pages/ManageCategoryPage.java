@@ -8,11 +8,11 @@ import org.openqa.selenium.support.PageFactory;
 import constant.Constant;
 import utilities.FileUploadUtilities;
 import utilities.PageUtilities;
-import utilities.WaitUtilities;
+
 
 public class ManageCategoryPage {
-	@FindBy (xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-category']")WebElement moreinfo;
-	@FindBy (xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/Category/add']")WebElement newadd;
+	//@FindBy (xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-category']")WebElement moreinfo;
+	@FindBy (xpath="//a[contains(@class,'btn') and contains(.,'New')]")WebElement newadd;
 	@FindBy (xpath="//input[@placeholder='Enter the Category']")WebElement entercategory;
 	@FindBy (xpath="//div[@id='ms-grp_id']")WebElement selectgroups;
 	@FindBy (xpath="//li[@id='134-selectable']")WebElement discount;
@@ -26,24 +26,28 @@ public class ManageCategoryPage {
 		//to initialize web elements
 		PageFactory.initElements(driver, this);
 	}
-	 public void clickMoreInfo() {
+	 /*public void clickMoreInfo() {
 		 moreinfo.click();
-	}
-	 public void clickNewAdd() {
+	}*/
+	 public ManageCategoryPage clickNewAdd() {
 		 newadd.click();
+		 return this;
 	 }
-	 public void enterCategory(String name) {
+	 public ManageCategoryPage enterCategory(String name) {
 		 entercategory.sendKeys(name);
+		 return this;
 	 }
-	 public void selectDiscount() {
+	 public ManageCategoryPage selectDiscount() {
 		 selectgroups.click();
 		 discount.click();
+		 return this;
 	 }
-	 public void clickChooseFile() {
+	 public ManageCategoryPage clickChooseFile() {
 		FileUploadUtilities choose=new FileUploadUtilities();
 		choose.fileUploadUsingSendKeys(image, Constant.IMAGEFILE);
+		return this;
 	 }
-	 public void clickSave() {
+	 public ManageCategoryPage clickSave() {
 		 PageUtilities change= new PageUtilities();
 		 //WaitUtilities waitUtil = new WaitUtilities();
 		// ✅ Wait until element is present & clickable
@@ -52,6 +56,7 @@ public class ManageCategoryPage {
 		 change.scrollToBottom(driver);
 		 //click save
 		 change.click(driver, save);
+		 return this;
 	 }
 	 public boolean isSuccessAlertDisplayed() {
 			return successalert.isDisplayed();
