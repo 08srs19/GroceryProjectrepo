@@ -17,7 +17,7 @@ public class ManageContactPage {
 	@FindBy (xpath="//textarea[@placeholder='Enter Delivery Time']")WebElement deliverytime;
 	@FindBy (xpath="//input[@id='del_limit']")WebElement deliverylimit;
 	@FindBy(xpath = "//button[@type='submit']")WebElement update;
-	@FindBy (xpath="//div[contains(@class,'alert-success')]")WebElement successalert;
+	@FindBy (xpath="//div[@class='alert alert-success alert-dismissible']")WebElement successalert;
 	public WebDriver driver;
 	public ManageContactPage(WebDriver driver) {
 		//assigning instance to local variable
